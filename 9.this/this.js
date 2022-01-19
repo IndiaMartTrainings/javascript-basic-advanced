@@ -6,41 +6,70 @@ function sample(){
 
 sample()
 
-// Problem 
-
+// problem 
 var obj = {
-    name: "uma",
+    name: "manoj",
     getName: function(){
         console.log(this)
-        this.name = "mahesh"
+        this.name ="uma"
         console.log(this)
 
-        var updateName = function(){           
-            this.name = "umesh"
+        var updateName = function(){
+            this.name ="scott"
             console.log(this)
         }
+
         updateName()
     }
 }
 
 obj.getName()
 
-// Solution 
-
+// solution  using varable
 var obj = {
-    name: "uma",
+    name: "manoj",
     getName: function(){
-        var self = this
-        console.log(self)
-        self.name = "mahesh"
-        console.log(self)
+        var indiaMart = this
 
-        var updateName = function(){           
-            self.name = "umesh"
-            console.log(self)
+        console.log(indiaMart)
+        indiaMart.name ="uma"
+        console.log(indiaMart)
+
+        var updateName = function(){
+            indiaMart.name ="scott"
+            console.log(indiaMart)
         }
+
         updateName()
     }
 }
 
 obj.getName()
+
+// solution using bind method
+
+// problem 
+var obj = {
+    name: "manoj",
+    getName: function(){
+        console.log(this)
+        this.name ="uma"
+        console.log(this)
+
+        var updateName = function(){
+            this.name ="scott"
+            console.log(this)
+        }.bind(this)
+
+        updateName()
+    }
+}
+
+obj.getName()
+
+function sayHello(){
+    console.log(this)
+}
+
+var output = sayHello.bind(this)
+console.log(output())
