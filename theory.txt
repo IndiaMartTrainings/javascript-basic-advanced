@@ -182,9 +182,7 @@ JSON
 -------
 JavaScript Object Notation
 
-common usage of 
-
-Inspired by the object literal notation {}
+JSON is Inspired by the object literal notation {}
 
 <data>
     <firstname>uma</firstname>
@@ -208,7 +206,7 @@ Object
     lastName: "Mahesh"
 }
 
-poperties have to be wrapped in quotes for JSON
+poperties have to be wrapped in double quotes (" ") for JSON
 
 Anything which is JSON valid is valid in object literal
 
